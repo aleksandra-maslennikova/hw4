@@ -73,7 +73,7 @@ let array = Array.from({ length: 35 }).map((value, index) => index % 2 ? { age: 
 console.log(array); //[ {age:NaN}, {age:3}, {age:NaN}, {age:5}, {age:NaN}, {age:7} ....]
 console.log(array.length); // 35
 
-function addPropertyToObgect(arr){
+function addPropertyToObject(arr){
     let newArr1 = [];
     for (let i = 0; i < arr.length; i++) {
             if (isNaN (arr[i].age)){
@@ -84,4 +84,4 @@ function addPropertyToObgect(arr){
     return newArr1;
 }
 
-console.log(addPropertyToObgect (array));
+console.log(addPropertyToObject (array));
