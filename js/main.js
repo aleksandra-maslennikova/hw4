@@ -85,3 +85,33 @@ function addPropertyToObject(arr){
 }
 
 console.log(addPropertyToObject (array));
+
+//------------------------------------
+/*Написать функцию, которая возвращает 1 массив, содержащий внутри себя 2 массива.
+
+Первый массив четные числа в обратном порядке. Второй массив нечетные числа в обычном порядке*/
+
+
+let myArr1 = [1,2,3,4,5,6,7,8,9];
+
+function evenOdd(arr) { 
+    let evenArr = [];
+    let oddArr = [];
+    let reverseEvenArr=[];
+
+        for ( let i = 0; i < arr.length; i++){
+            if (arr[i] % 2 == 0){
+                evenArr.push(arr[i]);
+            }
+            else {
+                 oddArr.push(arr[i]);
+            }
+        }
+
+         for (let j = evenArr.length - 1; j >= 0; j--){
+            reverseEvenArr.push(evenArr[j]);
+        }
+        return [ reverseEvenArr, oddArr];
+    }
+
+console.log(evenOdd(myArr1)) //[ [8,6,4,2], [1,3,5,7,9]
