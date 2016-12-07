@@ -107,11 +107,31 @@ function evenOdd(arr) {
                  oddArr.push(arr[i]);
             }
         }
-
          for (let j = evenArr.length - 1; j >= 0; j--){
             reverseEvenArr.push(evenArr[j]);
         }
-        return [ reverseEvenArr, oddArr];
+        return [ evenArr, oddArr];
     }
 
 console.log(evenOdd(myArr1)) //[ [8,6,4,2], [1,3,5,7,9]
+
+let myArr2 = [1,2,3,4,5,6,7,8,9];
+
+//--------------------variant2-------------------------
+function evenOdd1(arr) { 
+    let evenArr1 = [];
+    let oddArr1 = [];
+
+        for ( let i = 0; i < arr.length; i++){
+            if (arr[i] % 2 == 0){
+                evenArr1.push(arr[i]);
+            }
+            else {
+                 oddArr1.push(arr[i]);
+            }
+        }
+        evenArr1.reverse();
+        return [ evenArr1, oddArr1];
+    }
+
+console.log(evenOdd1(myArr1)) //[ [8,6,4,2], [1,3,5,7,9]
